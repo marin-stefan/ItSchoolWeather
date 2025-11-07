@@ -6,5 +6,5 @@ function windToKmPerHour(windPerMeters) {
 
 function getWeatherIcon (iconCode) {
     // Noi de la API primim un cod pentru iconita si ne folosim de url-ul de la OpenWeather dedicat iconiter
-    return `http://openweathermap.org/img/wn/${iconCode}@2x.png`
+    return `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
 }
