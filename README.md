@@ -1,5 +1,84 @@
 ItSchool Weather - Project2 - Marin Ștefan Daniel - 2025
 
 
-# Acest proiect afiseaza detalii meteo despre anumite orase, in functie de optiunile definite de utilizator. 
-# Detaliile meteo provin de un API gratuit : Api.Openweather.org
+# 🌦️ Weather App
+
+A simple and responsive Weather App built using JavaScript, HTML, and CSS.  
+It displays the current weather and a 5-day forecast for a selected city, using real-time data from the OpenWeatherMap API.
+
+---
+
+## 🚀 Features
+
+- Current weather and 5-day forecast display  
+- City selection via a dropdown menu with multiple predefined cities  
+- Remembers your last selected city using Local Storage  
+  - If no city is stored, București is used as the default  
+- Automatic weather update when changing the city  
+- Fetches data securely via HTTPS requests from the OpenWeatherMap API  
+- Filters and displays relevant information (temperature, humidity, description, icons, etc.)
+
+---
+
+## 🧠 How It Works
+
+1. When the app loads, it checks Local Storage for a saved city.  
+2. If found, it fetches and displays the weather for that city.  
+3. If not, it defaults to București.  
+4. The user can choose a different city from the dropdown.  
+5. The new city is saved in Local Storage and its weather data is displayed.  
+6. Data is fetched from OpenWeatherMap via two endpoints:
+   - Current weather data
+   - 5-day forecast data
+
+---
+
+## 🧰 Technologies Used
+
+- HTML5 – structure and layout  
+- CSS3 – styling and responsive design  
+- JavaScript (ES6+) – logic, data fetching, and DOM manipulation  
+- OpenWeatherMap API – weather data source  
+
+---
+
+## ⚙️ Setup & Usage
+
+1. Clone or download the project:
+   git clone https://github.com/yourusername/weather-app.git
+
+2. Open index.html in your browser.
+
+3. The app will automatically fetch the weather for București or your previously selected city.
+
+4. Use the city selector to change the city and see updated data instantly.
+
+---
+
+## 🔑 API Information
+
+- Weather data is fetched from https://openweathermap.org/api  
+- You’ll need a free API key from OpenWeatherMap.  
+- Insert your key into the JavaScript file where the fetch requests are made.
+
+---
+
+## 🌍 Live Demo
+
+Check out the live version here:  
+https://weather-app-demo.netlify.app  (temporary link — to be updated after deployment)
+
+---
+
+## 🏫 About
+
+This project is part of the IT School Web Development Bootcamp and represents the first practical project of the program.  
+It demonstrates basic API integration, DOM manipulation, and persistent data storage in the browser.
+
+---
+
+## 👨‍💻 Author
+
+Marin Ștefan Daniel  
+Email: stefann06@yahoo.com  
+Live Demo: https://weather-app-demo.netlify.app
