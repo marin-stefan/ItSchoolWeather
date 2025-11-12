@@ -37,7 +37,7 @@ function displayWeatherForecast(city) {
                 }
             });
 
-            // farcurgem cu forIn continutul obiectului daysMap
+            // parcurgem cu forIn continutul obiectului daysMap
             // cheile din obiect sunt zilele saptamanii pt care avem proedictii
 
             for (key in daysMap) {

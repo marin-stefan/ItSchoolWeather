@@ -6,48 +6,25 @@ function getDayOfTheWeek (dateInUtcFormat) {
     // Extragem ziua saptamanii sub dorma de index
     const dayIndex = date.getDay();
     
-    // Pentru a mapa indexul zilei cu ziele in romana o sa folosim un switch
-    // let day;
-    // switch(dayIndex) {
-    //     case 0:
-    //         day = "Duminica";
-    //         break;
-    //     case 1:
-    //         day = 'Luni';
-    //         break;
-    //     case 2: 
-    //         day = 'Marti';
-    //         break;
-    //     case 3:
-    //         day = 'Miercuri';
-    //         break;
-    //     case 4:
-    //         day = 'Joi';
-    //         break;
-    //     case 5: 
-    //         day = "Vineri";
-    //         break;
-    //     case 6:
-    //         day = "Sambata"
-    //         break;
-    //     default: 
-    //         // Aruncam o eroare dadaca index-ul nu este valid
-    //         throw new Error('Indexul trebuie sa fie intre 0 si 6')
-    // };
-    // return day;
-
-    // Sau putem folosi o varianta mai simpla
+    // Pentru a mapa indexul zilei folosim un array cu zilele si ne folosim de indexul fiecarei zile
     const days = ['Duminică', "Luni", 'Marți', 'Miercuri', "Joi", "Vineri", "Sâmbătă"];
-    return days[dayIndex] ? days[dayIndex] : 'Astăzi';
+
+    if (days[dayIndex]) {
+        return days[dayIndex];
+    } else {
+        throw new Error('Indexul trebuie sa fie intre 0 si 6');
+    }
 }
 
 function getHour(dateInUtcFormat) {
     const date = new Date(dateInUtcFormat * 1000);
+
     // extragem ora
     let hour = date.getHours();
+    
     // Daca ora are o valoare mai mica de 10 - ii adaugam un 0
     if (hour < 10) {
-        hour = `0${hour}`;
+        hour = `0${ hour }`;
     };
 
     // Extragem minutele, si la fel daca valoarea e mai mica de 10 - ii adaugam un 0
