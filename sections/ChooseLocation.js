@@ -2,8 +2,8 @@
 const bucharestButton = document.querySelector(".dropdown-item.bucharest");
 const timisoaraButton = document.querySelector(".dropdown-item.timisoara");
 const oradeaButton = document.querySelector(".dropdown-item.oradea");
-const clujButton = document.querySelector(".dropdown-item.cluj");
-const constantaButton = document.querySelector(".dropdown-item.constanta");
+const aradButton = document.querySelector(".dropdown-item.arad");
+const sibiuButton = document.querySelector(".dropdown-item.sibiu");
 
 // definim o functie care sane schimbe orasul curent afisat epe ecran
 function updateCurrentCityName(city) {
@@ -39,10 +39,10 @@ oradeaButton.addEventListener("click", () => {
     updateWeather("Oradea");
 });
 
-clujButton.addEventListener("click", () => {
-    updateWeather("Cluj");
+aradButton.addEventListener("click", () => {
+    updateWeather("Arad");
 });
 
-constantaButton.addEventListener("click", () => {
-    updateWeather("Constanța");
+sibiuButton.addEventListener("click", () => {
+    updateWeather("Sibiu");
 });

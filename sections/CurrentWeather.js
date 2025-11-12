@@ -25,7 +25,7 @@ function displayCurrentWeather(city) {
             const currentWeatherContainer = document.querySelector('.current-weather');
             currentWeatherContainer.innerHTML = `
                 <div class="px-3">
-                    <div class="fs-2 mb-2"><strong>${ name }</strong></div>
+                    <div class="fs-2 mb-2"><strong>${ city }</strong></div>
                     <div class="fs-4"><strong>${ day }</strong>, ${ hour }</div>
                     <div class="d-flex align-items-center justify-content-center">
                         <strong class="fs-1">${ temperature }°C</strong>
