@@ -2,6 +2,7 @@
 function getDayOfTheWeek (dateInUtcFormat) {
     // Pentru a putea crea o data pornind de la o valoare in UTC este nevoie sa o inmultim cu 1000
     const date = new Date(dateInUtcFormat * 1000);
+
     // Extragem ziua saptamanii sub dorma de index
     const dayIndex = date.getDay();
     
@@ -51,10 +52,10 @@ function getHour(dateInUtcFormat) {
 
     // Extragem minutele, si la fel daca valoarea e mai mica de 10 - ii adaugam un 0
     let minutes = date.getMinutes();
-    if(minutes < 10) {
-        minutes = `0${minutes}`;
+    if (minutes < 10) {
+        minutes = `0${ minutes }`;
     };
 
     // Returnam ora sub formatul dorit
-    return `${hour}:${minutes}`;
+    return `${ hour }:${ minutes }`;
 }

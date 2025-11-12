@@ -7,9 +7,9 @@ function getCurrentWeatherEndpoint(city) {
 	// lang - noi o sa trimitem ro
 	// units - metric, pentru a primit rezultatele in grade Celsius
 	// am mutat API_KEY intr-un fisier separat care este adaugat in .gitignore pentru a nu fi urcat si sharre-uit pe GIT
-	return `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ro&units=metric&appid=${API_KEY}`;
+	return `https://api.openweathermap.org/data/2.5/weather?q=${ city }&lang=ro&units=metric&appid=${ API_KEY }`;
 }
 
 function getForecatEndpoint(city) {
-    return `https://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=ro&units=metric&appid=${API_KEY}`
+    return `https://api.openweathermap.org/data/2.5/forecast?q=${ city }&lang=ro&units=metric&appid=${ API_KEY }`
 }
