@@ -69,9 +69,10 @@ function displayWeatherForecast(city) {
                     weatherForecastContainer.innerHTML += `
                         <div class="weather-forecast-box d-flex w-100 justify-content-between align-items-center border rounded p-3 mb-3">
                             <div>${ hour }</div>
+                            <div class="forecast-item-description">${ weatherDescription }</div>
                             <div><img src="${ weatherIcon }" alt="" /></div>
                             <div class="fs-3"><strong> ${ temperature }°C</strong></div>
-                            <div class="real-feel">Real feel: <strong>${ realFeel }°C</strong></div>
+                            <div class="forecast-real-feel">Real feel: <strong>${ realFeel }°C</strong></div>
                         </div>
                     `;
                 })

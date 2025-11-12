@@ -55,6 +55,11 @@ header {
   height: 30vh;
 }
 
+/* description of each item from 5 day forecast will have cap first letter */
+.forecast-item-description::first-letter {
+  text-transform: uppercase;
+}
+
 /* Scrolltotop icon */
 .scroll-to-top {
   visibility: hidden;
@@ -84,7 +89,8 @@ header {
     height: auto;
   }
 
-  .weather-forecast-box .real-feel {
+  .weather-forecast-box .forecast-real-feel,
+  .weather-forecast-box .forecast-item-description {
     display: none;
   }
 }
