@@ -17,6 +17,9 @@ It displays the current weather and a 5-day forecast for a selected city, using 
 - Automatic weather update when changing the city  
 - Fetches data securely via HTTPS requests from the OpenWeatherMap API  
 - Filters and displays relevant information (temperature, humidity, description, icons, etc.)
+- 🔝 **Scroll-to-top functionality** appears when the user scrolls down more than half of the page, allowing quick navigation back to the top  
+
+
 
 ---
 
@@ -30,6 +33,7 @@ It displays the current weather and a 5-day forecast for a selected city, using 
 6. Data is fetched from OpenWeatherMap via two endpoints:
    - Current weather data
    - 5-day forecast data
+7. A **scroll-to-top button** becomes visible when the user scrolls past 50% of the page height and hides again when above that threshold.
 
 ---
 
@@ -52,6 +56,8 @@ It displays the current weather and a 5-day forecast for a selected city, using 
 3. The app will automatically fetch the weather for București or your previously selected city.
 
 4. Use the city selector to change the city and see updated data instantly.
+
+5. Scroll down the page — the scroll-to-top button will appear once you’ve passed halfway down.
 
 ---
 
