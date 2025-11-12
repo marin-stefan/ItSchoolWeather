@@ -30,9 +30,7 @@
   background-color: #101d42 !important;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   font-weight: bold;
 }
 
@@ -45,7 +43,6 @@ body {
 body {
   display: flex;
   flex-direction: column;
-
   min-height: 100vh;
 }
 
@@ -56,6 +53,19 @@ main {
 /* Header */
 header {
   height: 30vh;
+}
+
+/* Scrolltotop icon */
+.scroll-to-top {
+  visibility: hidden;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #141e4c;
+  font-size: 48px;
+  background-color: white;
+  border-radius: 50%;
 }
 
 /* adaugam stilizarea pt mobil */
