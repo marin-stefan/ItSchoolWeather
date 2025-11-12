@@ -2,6 +2,8 @@
 const bucharestButton = document.querySelector(".dropdown-item.bucharest");
 const timisoaraButton = document.querySelector(".dropdown-item.timisoara");
 const oradeaButton = document.querySelector(".dropdown-item.oradea");
+const clujButton = document.querySelector(".dropdown-item.cluj");
+const constantaButton = document.querySelector(".dropdown-item.constanta");
 
 // definim o functie care sane schimbe orasul curent afisat epe ecran
 function updateCurrentCityName(city) {
@@ -13,10 +15,13 @@ function updateCurrentCityName(city) {
 function updateWeather(city) {
     // salvam in localstorgae optiunea aleasa
     localStorage.setItem("city", city);
+
     //afisam vremea curenta
     displayCurrentWeather(city);
+
     // apelam functia care ne schimba orasul curent de pe ecran
     updateCurrentCityName(city);
+
     //reafisam si prognoza pentru urmatoarele 5 zile
     displayWeatherForecast(city);
 }
@@ -32,4 +37,12 @@ timisoaraButton.addEventListener("click", () => {
 
 oradeaButton.addEventListener("click", () => {
     updateWeather("Oradea");
+});
+
+clujButton.addEventListener("click", () => {
+    updateWeather("Cluj");
+});
+
+constantaButton.addEventListener("click", () => {
+    updateWeather("Constanța");
 });
