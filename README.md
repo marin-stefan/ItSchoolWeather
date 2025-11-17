@@ -72,7 +72,7 @@ It displays the current weather and a 5-day forecast for a selected city, using 
 ## 🌍 Live Demo
 
 Check out the live version here:  
-https://weather-app-demo.netlify.app  (temporary link — to be updated after deployment)
+https://marin-stefan-itschool-weatherapp.netlify.app
 
 ---
 
@@ -87,4 +87,4 @@ It demonstrates basic API integration, DOM manipulation, and persistent data sto
 
 Marin Ștefan Daniel  
 Email: stefann06@yahoo.com  
-Live Demo: https://weather-app-demo.netlify.app
+Live Demo: https://marin-stefan-itschool-weatherapp.netlify.app

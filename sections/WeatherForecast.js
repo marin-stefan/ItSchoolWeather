@@ -80,6 +80,7 @@ function displayWeatherForecast(city) {
                             <div class="forecast-real-feel">Real feel: <strong>${ realFeel }°C</strong></div>
                         </div>
                     `;
+                    console.log(weatherIcon)
                 })
             }
 
