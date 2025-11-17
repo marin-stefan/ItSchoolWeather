@@ -44,7 +44,7 @@ function displayWeatherForecast(city) {
                 // afisam ziua curenta pe ecran
                 weatherForecastContainer.innerHTML += `
                     <div class="pb-4 pt-4 mb-3 pr-3 rounded border d-flex align-items-center justify-content-between forecast-day">
-                        <h3 class="text-primary mb-0">${ key }</h3>
+                        <h3 class="text-primary p-3 mb-0">${ key }</h3>
                         <span class="material-symbols-outlined acc-header mr-5 fs-3 rounded" id="${ key }">
                             expand_all
                         </span>
