@@ -19,7 +19,10 @@ function displayCurrentWeather(city) {
             // Atentie - weather este un array cu un singur element
             const weatherDescription = weather[0].description;
             const windSpeed = Math.round(windToKmPerHour(wind.speed));
-            const weatherIcon = getWeatherIcon(weather[0].icon);
+
+            //parsam iconita si updatam url-ul la https
+            const weatherIconUrl = getWeatherIcon(weather[0].icon);
+            updatedWeatherIconUrl = weatherIconUrl.slice(0, 4) + "s" + weatherIconUrl.slice(4);
 
             // Afisam in HTML informatiile parsate mai sus
             const currentWeatherContainer = document.querySelector('.current-weather');
@@ -29,7 +32,7 @@ function displayCurrentWeather(city) {
                     <div class="fs-4"><strong>${ day }</strong>, ${ hour }</div>
                     <div class="d-flex align-items-center justify-content-center">
                         <strong class="fs-1">${ temperature }°C</strong>
-                        <img src="${ weatherIcon }" />
+                        <img src="${ updatedWeatherIconUrl }" />
                     </div>
                 </div>
                 <div class="px-3">
