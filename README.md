@@ -1,6 +1,5 @@
 ItSchool Weather - Project2 - Marin Ștefan Daniel - 2025
 
-
 # 🌦️ Weather App
 
 A simple and responsive Weather App built using JavaScript, HTML, and CSS.  
@@ -11,15 +10,16 @@ It displays the current weather and a 5-day forecast for a selected city, using 
 ## 🚀 Features
 
 - Current weather and 5-day forecast display  
+- The 5-day forecast is presented in an accordion-style menu  
+  - The first day’s forecast is expanded by default  
+  - Each day can be opened or closed individually using the expand/collapse icon  
 - City selection via a dropdown menu with multiple predefined cities  
 - Remembers your last selected city using Local Storage  
   - If no city is stored, București is used as the default  
 - Automatic weather update when changing the city  
 - Fetches data securely via HTTPS requests from the OpenWeatherMap API  
-- Filters and displays relevant information (temperature, humidity, description, icons, etc.)
-- 🔝 **Scroll-to-top functionality** appears when the user scrolls down more than half of the page, allowing quick navigation back to the top  
-
-
+- Filters and displays relevant information (temperature, humidity, description, icons, etc.)  
+- 🔝 Scroll-to-top functionality appears when the user scrolls down more than half of the page, allowing quick navigation back to the top  
 
 ---
 
@@ -30,10 +30,10 @@ It displays the current weather and a 5-day forecast for a selected city, using 
 3. If not, it defaults to București.  
 4. The user can choose a different city from the dropdown.  
 5. The new city is saved in Local Storage and its weather data is displayed.  
-6. Data is fetched from OpenWeatherMap via two endpoints:
-   - Current weather data
-   - 5-day forecast data
-7. A **scroll-to-top button** becomes visible when the user scrolls past 50% of the page height and hides again when above that threshold.
+6. Data is fetched from OpenWeatherMap via two endpoints:  
+   - Current weather data  
+   - 5-day forecast data  
+7. A scroll-to-top button becomes visible when the user scrolls past 50% of the page height and hides again when above that threshold.  
 
 ---
 
@@ -48,8 +48,8 @@ It displays the current weather and a 5-day forecast for a selected city, using 
 
 ## ⚙️ Setup & Usage
 
-1. Clone or download the project:
-   git clone https://github.com/yourusername/weather-app.git
+1. Clone or download the project:  
+   git clone https://github.com/marin-stefan/ItSchoolWeather.git
 
 2. Open index.html in your browser.
 
