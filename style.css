@@ -73,6 +73,18 @@ header {
   border-radius: 50%;
 }
 
+/* stilizare pentru acordion*/ 
+.acc-header {
+  cursor: pointer;
+  background-color: #141e4c;
+  color: white;
+}
+
+.forecast-day {
+  padding-right: 16px;
+  background-color: #dfedf5;
+}
+
 /* adaugam stilizarea pt mobil */
 @media (max-width: 576px) {
   .current-weather {

@@ -43,7 +43,12 @@ function displayWeatherForecast(city) {
             for (key in daysMap) {
                 // afisam ziua curenta pe ecran
                 weatherForecastContainer.innerHTML += `
-                    <h3 class="text-primary">${ key }</h3>
+                    <div class="pb-4 pt-4 mb-3 pr-3 rounded border d-flex align-items-center justify-content-between forecast-day">
+                        <h3 class="text-primary mb-0">${ key }</h3>
+                        <span class="material-symbols-outlined acc-header mr-5 fs-3 rounded" id="${ key }">
+                            expand_all
+                        </span>
+                    </div>
                 `;
 
                 // pentru fiecare zi a saptamanii extragem predictiile si iteram prin ele
@@ -63,19 +68,40 @@ function displayWeatherForecast(city) {
                     const weatherDescription = weather[0].description;
 
                     //parsam iconita
-                    const weatherIcon = getWeatherIcon(weather[0].icon)
+                    const weatherIcon = getWeatherIcon(weather[0].icon);
                     
                     // afisam datele pe ecran
                     weatherForecastContainer.innerHTML += `
-                        <div class="weather-forecast-box d-flex w-100 justify-content-between align-items-center border rounded p-3 mb-3">
+                        <div class="weather-forecast-box d-flex w-100 justify-content-between align-items-center border rounded p-3 mb-3 acc-content-${ key } d-none">
                             <div>${ hour }</div>
                             <div class="forecast-item-description">${ weatherDescription }</div>
-                            <div><img src="${ weatherIcon }" alt="" /></div>
+                            <div><img src="${ weatherIcon }" alt="weather Icon" /></div>
                             <div class="fs-3"><strong> ${ temperature }°C</strong></div>
                             <div class="forecast-real-feel">Real feel: <strong>${ realFeel }°C</strong></div>
                         </div>
                     `;
                 })
             }
+
+            //selectam tagurile necesare
+            const headers = document.querySelectorAll(".acc-header");
+            const todayHeader = headers[0]; 
+
+            // afisam optiunile pentru prima zi si modificam si iconita
+            document.querySelectorAll(`.acc-content-${ todayHeader.id }`)
+                .forEach((forecastElement) => forecastElement.classList.remove("d-none"));
+            todayHeader.innerHTML = "collapse_all";
+
+            headers.forEach(header => {
+                header.addEventListener("click", () => {
+                    // schimbam iconita in functie de detalii daca sunt deschise sau inchise
+                    header.innerHTML = header.innerHTML === "collapse_all" ? "expand_all" : "collapse_all"
+
+                    // la click pe una din zile se afiseaza detaliile si se ascund toate celelate zile
+                    document.querySelectorAll(`.acc-content-${ header.id }`)
+                        .forEach((forecastElement) => forecastElement.classList.toggle("d-none"));
+                });
+            });
+
         });
 }
