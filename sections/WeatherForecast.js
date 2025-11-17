@@ -67,20 +67,20 @@ function displayWeatherForecast(city) {
                     // pentru a obtine descrierea trebuie sa avem grija ca weather este un array cu un singur element
                     const weatherDescription = weather[0].description;
 
-                    //parsam iconita
-                    const weatherIcon = getWeatherIcon(weather[0].icon);
+                    //parsam iconita si updatam url-ul la https
+                    const weatherIconUrl = getWeatherIcon(weather[0].icon);
+                    updatedWeatherIconUrl = weatherIconUrl.slice(0, 4) + "s" + weatherIconUrl.slice(4);
                     
                     // afisam datele pe ecran
                     weatherForecastContainer.innerHTML += `
                         <div class="weather-forecast-box d-flex w-100 justify-content-between align-items-center border rounded p-3 mb-3 acc-content-${ key } d-none">
                             <div>${ hour }</div>
                             <div class="forecast-item-description">${ weatherDescription }</div>
-                            <div><img src="${ weatherIcon }" alt="weather Icon" /></div>
+                            <div><img src="${ updatedWeatherIconUrl }" alt="weather Icon" /></div>
                             <div class="fs-3"><strong> ${ temperature }°C</strong></div>
                             <div class="forecast-real-feel">Real feel: <strong>${ realFeel }°C</strong></div>
                         </div>
                     `;
-                    console.log(weatherIcon)
                 })
             }
 
